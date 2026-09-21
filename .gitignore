@@ -1,0 +1,38 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Intermediate build objects
+[Oo]bj/
+packages/
+
+# Ignore binaries except referenced libraries needed for build
+[Bb]in/**
+![Bb]in/Debug/
+![Bb]in/Debug/*.dll
+![Bb]in/x86/
+![Bb]in/x86/Debug/
+![Bb]in/x86/Debug/*.dll
+bin/**/*.exe
+bin/**/*.pdb
+bin/**/*.xml
+bin/**/*.config
+bin/**/*.manifest
+
+# Databases and large archives
+*.mdb
+*.zip
+*.bak
+*.sem
+*.log
+
+# Scratch & decompiled folders
+Copia/
+TempDecompiled/
+TempDecompiledFull/
+
+# Tools
+nuget.exe

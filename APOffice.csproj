@@ -1,0 +1,1619 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BC66E45B-673D-4E01-9450-AED3E127ADFD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>APOffice</RootNamespace>
+    <AssemblyName>APOffice</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>AP.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdvancedDataGridView, Version=1.2.30115.18, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\DG.AdvancedDataGridView.1.2.30115.18\lib\net40\AdvancedDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="BarcodeLib, Version=1.0.0.15, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\BarcodeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Debug\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Debug\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="MPK_Calendar, Version=1.0.2138.27879, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Debug\MPK_Calendar.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.32.2608.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.32.2608.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\PdfSharp.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APDataGridView.cs" />
+    <Compile Include="clsAggGiacenza.cs" />
+    <Compile Include="clsDbMigration.cs" />
+    <Compile Include="clsBilBizerba.cs" />
+    <Compile Include="clsBilBizWinvarp.cs" />
+    <Compile Include="clsBilCheckOutSerialPort.cs" />
+    <Compile Include="clsBilCheckOutBizerba.cs" />
+    <Compile Include="clsBilCheckOutHelmac.cs" />
+    <Compile Include="clsDivApDiv.cs" />
+    <Compile Include="clsBilOmega.cs" />
+    <Compile Include="clsDivApOffice.cs" />
+    <Compile Include="clsDivBrendolan.cs" />
+    <Compile Include="clsDivDado.cs" />
+    <Compile Include="clsDivDmo.cs" />
+    <Compile Include="clsDivFietta.cs" />
+    <Compile Include="clsDivGabbiano.cs" />
+    <Compile Include="clsDivGottardo.cs" />
+    <Compile Include="clsDivSMA.cs" />
+    <Compile Include="clsDivUnicom.cs" />
+    <Compile Include="clsDivDPiu.cs" />
+    <Compile Include="clsDivEuroSpesa.cs" />
+    <Compile Include="clsDivMigross.cs" />
+    <Compile Include="clsDivOrtoFrutticola.cs" />
+    <Compile Include="clsDivTerron.cs" />
+    <Compile Include="clsDivVefri.cs" />
+    <Compile Include="clsExcel.cs" />
+    <Compile Include="clsExcel2.cs" />
+    <Compile Include="clsGenDefine.cs" />
+    <Compile Include="clsGenPdfArtEcr.cs" />
+    <Compile Include="clsGenPdfEti2.cs" />
+    <Compile Include="clsGenPdfMovVen.cs" />
+    <Compile Include="clsGenPdfRep.cs" />
+    <Compile Include="clsGenPdfEti.cs" />
+    <Compile Include="clsGenPdfEtiDB.cs" />
+    <Compile Include="clsGenFuncs.cs" />
+    <Compile Include="clsGenCtrlCodici.cs" />
+    <Compile Include="clsGenMdb.cs" />
+    <Compile Include="clsGenPdfSta1.cs" />
+    <Compile Include="clsGenPdfVenErr.cs" />
+    <Compile Include="clsGenStampe.cs" />
+    <Compile Include="clsGenVariazioni.cs" />
+    <Compile Include="clsGenQuery.cs" />
+    <Compile Include="clsGenTabTmp.cs" />
+    <Compile Include="clsGesFtp.cs" />
+    <Compile Include="clsGesGraph.cs" />
+    <Compile Include="clsMail.cs" />
+    <Compile Include="clsGesMovIngLabel03.cs" />
+    <Compile Include="clsOpenXml1.cs" />
+    <Compile Include="clsPosApShop01.cs" />
+    <Compile Include="clsPosBrainpos.cs" />
+    <Compile Include="clsResize.cs" />
+    <Compile Include="clsSharpZip.cs" />
+    <Compile Include="clsTermCsv2.cs" />
+    <Compile Include="clsTermCsv1.cs" />
+    <Compile Include="clsTermMemor.cs" />
+    <Compile Include="clsPosDitron.cs" />
+    <Compile Include="clsPosNcr745x.cs" />
+    <Compile Include="clsPosUgaSid20.cs" />
+    <Compile Include="clsUiIcons.cs" />
+    <Compile Include="frmAMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAMain.Designer.cs">
+      <DependentUpon>frmAMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAIChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAIChat.Designer.cs">
+      <DependentUpon>frmAIChat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaArtLegami.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaArtLegami.Designer.cs">
+      <DependentUpon>frmAnaArtLegami.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaArtEquivalenze.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaArtEquivalenze.Designer.cs">
+      <DependentUpon>frmAnaArtEquivalenze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaArticolo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaArticolo.Designer.cs">
+      <DependentUpon>frmAnaArticolo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaArtImgWebSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaArtImgWebSearch.Designer.cs">
+      <DependentUpon>frmAnaArtImgWebSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaArtNuovo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaArtNuovo.Designer.cs">
+      <DependentUpon>frmAnaArtNuovo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaCfoDocumenti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaCfoDocumenti.Designer.cs">
+      <DependentUpon>frmAnaCfoDocumenti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaDivFornitori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaDivFornitori.designer.cs">
+      <DependentUpon>frmAnaDivFornitori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaDivForTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaDivForTest.designer.cs">
+      <DependentUpon>frmAnaDivForTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaDivForTesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaDivForTesta.designer.cs">
+      <DependentUpon>frmAnaDivForTesta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesMovIngLabel01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesMovIngLabel01.designer.cs">
+      <DependentUpon>frmGesMovIngLabel01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesMovIngLabel05.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesMovIngLabel05.designer.cs">
+      <DependentUpon>frmGesMovIngLabel05.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesOrdForMisto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesOrdForMisto.Designer.cs">
+      <DependentUpon>frmGesOrdForMisto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesStatMovLotto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesStatMovLotto.designer.cs">
+      <DependentUpon>frmGesStatMovLotto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesStatStoCancella.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesStatStoCancella.Designer.cs">
+      <DependentUpon>frmGesStatStoCancella.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesStatCeliachia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesStatCeliachia.designer.cs">
+      <DependentUpon>frmGesStatCeliachia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeekDivForTestate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeekDivForTestate.Designer.cs">
+      <DependentUpon>frmSeekDivForTestate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaDivForTestaOLd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaDivForTestaOLd.Designer.cs">
+      <DependentUpon>frmAnaDivForTestaOLd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaGestione.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaGestione.Designer.cs">
+      <DependentUpon>frmAnaGestione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaTessera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaTessera.designer.cs">
+      <DependentUpon>frmAnaTessera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaDivFornitoriOld.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaDivFornitoriOld.Designer.cs">
+      <DependentUpon>frmAnaDivFornitoriOld.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesFattElettroniche.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesFattElettroniche.Designer.cs">
+      <DependentUpon>frmGesFattElettroniche.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesMovIngLabel04.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesMovIngLabel04.designer.cs">
+      <DependentUpon>frmGesMovIngLabel04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesStatSettimanali.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesStatSettimanali.Designer.cs">
+      <DependentUpon>frmGesStatSettimanali.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesStatArticoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesStatArticoli.designer.cs">
+      <DependentUpon>frmGesStatArticoli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesStatIVA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesStatIVA.Designer.cs">
+      <DependentUpon>frmGesStatIVA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesStatMovCassa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesStatMovCassa.designer.cs">
+      <DependentUpon>frmGesStatMovCassa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesStatPunti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesStatPunti.Designer.cs">
+      <DependentUpon>frmGesStatPunti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesStatReparto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesStatReparto.designer.cs">
+      <DependentUpon>frmGesStatReparto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesStatStorico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesStatStorico.Designer.cs">
+      <DependentUpon>frmGesStatStorico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesTermImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesTermImport.Designer.cs">
+      <DependentUpon>frmGesTermImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrnArtMerceologie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrnArtMerceologie.designer.cs">
+      <DependentUpon>frmPrnArtMerceologie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeekDocLotti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeekDocLotti.Designer.cs">
+      <DependentUpon>frmSeekDocLotti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesDocLottiDettaglio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesDocLottiDettaglio.Designer.cs">
+      <DependentUpon>frmGesDocLottiDettaglio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesDocScoFatture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesDocScoFatture.Designer.cs">
+      <DependentUpon>frmGesDocScoFatture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesMovIngLabel02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesMovIngLabel02.designer.cs">
+      <DependentUpon>frmGesMovIngLabel02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesMovIngLabel03.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesMovIngLabel03.Designer.cs">
+      <DependentUpon>frmGesMovIngLabel03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaArtIngredient2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaArtIngredient2.Designer.cs">
+      <DependentUpon>frmAnaArtIngredient2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaArtIngredienti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaArtIngredienti.designer.cs">
+      <DependentUpon>frmAnaArtIngredienti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaArtMargini.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaArtMargini.Designer.cs">
+      <DependentUpon>frmAnaArtMargini.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaCliente.Designer.cs">
+      <DependentUpon>frmAnaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaFornitore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaFornitore.Designer.cs">
+      <DependentUpon>frmAnaFornitore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaTessera2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaTessera2.Designer.cs">
+      <DependentUpon>frmAnaTessera2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesDocumento.designer.cs">
+      <DependentUpon>frmGesDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesInvSimula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesInvSimula.Designer.cs">
+      <DependentUpon>frmGesInvSimula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesDocVenPesato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesDocVenPesato.Designer.cs">
+      <DependentUpon>frmGesDocVenPesato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesStatMovArticoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesStatMovArticoli.Designer.cs">
+      <DependentUpon>frmGesStatMovArticoli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesStatMovLegami.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesStatMovLegami.Designer.cs">
+      <DependentUpon>frmGesStatMovLegami.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesStatMovCassa2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesStatMovCassa2.Designer.cs">
+      <DependentUpon>frmGesStatMovCassa2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesStatRotazione.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesStatRotazione.Designer.cs">
+      <DependentUpon>frmGesStatRotazione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesTabEcr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesTabEcr.designer.cs">
+      <DependentUpon>frmGesTabEcr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesVarBilImpianto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesVarBilImpianto.Designer.cs">
+      <DependentUpon>frmGesVarBilImpianto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeekTessere.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeekTessere.designer.cs">
+      <DependentUpon>frmSeekTessere.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyAggArticoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyAggArticoli.Designer.cs">
+      <DependentUpon>frmUtyAggArticoli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyGenCosti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyGenCosti.Designer.cs">
+      <DependentUpon>frmUtyGenCosti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyArtFillMerceologie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyArtFillMerceologie.Designer.cs">
+      <DependentUpon>frmUtyArtFillMerceologie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyConf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyConf.Designer.cs">
+      <DependentUpon>frmUtyConf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyConf1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyConf1.Designer.cs">
+      <DependentUpon>frmUtyConf1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesChiusure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesChiusure.Designer.cs">
+      <DependentUpon>frmGesChiusure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesDivCtrlTab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesDivCtrlTab.Designer.cs">
+      <DependentUpon>frmGesDivCtrlTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesVarPromo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesVarPromo.Designer.cs">
+      <DependentUpon>frmGesVarPromo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesDocStatArticoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesDocStatArticoli.Designer.cs">
+      <DependentUpon>frmGesDocStatArticoli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesStatCtrlTotVen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesStatCtrlTotVen.Designer.cs">
+      <DependentUpon>frmGesStatCtrlTotVen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesStatCostiAggiorna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesStatCostiAggiorna.Designer.cs">
+      <DependentUpon>frmGesStatCostiAggiorna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesStatMerceologia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesStatMerceologia.Designer.cs">
+      <DependentUpon>frmGesStatMerceologia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesStat2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesStat2.Designer.cs">
+      <DependentUpon>frmGesStat2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesStatArt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesStatArt.Designer.cs">
+      <DependentUpon>frmGesStatArt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesStaTipoPagamenti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesStaTipoPagamenti.Designer.cs">
+      <DependentUpon>frmGesStaTipoPagamenti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesStatPremi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesStatPremi.Designer.cs">
+      <DependentUpon>frmGesStatPremi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesStatScoDettaglio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesStatScoDettaglio.Designer.cs">
+      <DependentUpon>frmGesStatScoDettaglio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyArtMerceologie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyArtMerceologie.Designer.cs">
+      <DependentUpon>frmUtyArtMerceologie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWait.Designer.cs">
+      <DependentUpon>frmWait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrnArtScadenza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrnArtScadenza.Designer.cs">
+      <DependentUpon>frmPrnArtScadenza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyAggPrzAnaArticoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyAggPrzAnaArticoli.Designer.cs">
+      <DependentUpon>frmUtyAggPrzAnaArticoli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMnUtility.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplash.Designer.cs">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMnUtility.Designer.cs">
+      <DependentUpon>frmMnUtility.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesStatScontrini.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesStatScontrini.Designer.cs">
+      <DependentUpon>frmGesStatScontrini.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrnForArticoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrnForArticoli.Designer.cs">
+      <DependentUpon>frmPrnForArticoli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyCtrlArts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyCtrlArts.designer.cs">
+      <DependentUpon>frmUtyCtrlArts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyCtrlJournal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyCtrlJournal.Designer.cs">
+      <DependentUpon>frmUtyCtrlJournal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyCtrlLisFor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyCtrlLisFor.Designer.cs">
+      <DependentUpon>frmUtyCtrlLisFor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyDay.Designer.cs">
+      <DependentUpon>frmUtyDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyDivApPhone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyDivApPhone.Designer.cs">
+      <DependentUpon>frmUtyDivApPhone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyInput1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyInput1.Designer.cs">
+      <DependentUpon>frmUtyInput1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyInvNegozio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyInvNegozio.Designer.cs">
+      <DependentUpon>frmUtyInvNegozio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyIva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyIva.Designer.cs">
+      <DependentUpon>frmUtyIva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyApShopAttArts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyApShopAttArts.Designer.cs">
+      <DependentUpon>frmUtyApShopAttArts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyArfErrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyArfErrato.Designer.cs">
+      <DependentUpon>frmUtyArfErrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyArtScontoVenduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyArtScontoVenduto.Designer.cs">
+      <DependentUpon>frmUtyArtScontoVenduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyImportXls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyImportXls.Designer.cs">
+      <DependentUpon>frmUtyImportXls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyImportXlsMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyImportXlsMap.Designer.cs">
+      <DependentUpon>frmUtyImportXlsMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyCtrlArtStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyCtrlArtStat.Designer.cs">
+      <DependentUpon>frmUtyCtrlArtStat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyCtrlPrv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyCtrlPrv.Designer.cs">
+      <DependentUpon>frmUtyCtrlPrv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyDivNegozi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyDivNegozi.Designer.cs">
+      <DependentUpon>frmUtyDivNegozi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyDivTerm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyDivTerm.Designer.cs">
+      <DependentUpon>frmUtyDivTerm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyEstrazioni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyEstrazioni.Designer.cs">
+      <DependentUpon>frmUtyEstrazioni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesStatCtrlPagamenti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesStatCtrlPagamenti.Designer.cs">
+      <DependentUpon>frmGesStatCtrlPagamenti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesStatCtrlTotali.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesStatCtrlTotali.Designer.cs">
+      <DependentUpon>frmGesStatCtrlTotali.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyDivPos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyDivPos.Designer.cs">
+      <DependentUpon>frmUtyDivPos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesDocPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesDocPrint.Designer.cs">
+      <DependentUpon>frmGesDocPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesDocRaggruppa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesDocRaggruppa.Designer.cs">
+      <DependentUpon>frmGesDocRaggruppa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesDocScontrino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesDocScontrino.Designer.cs">
+      <DependentUpon>frmGesDocScontrino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesDocTouch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesDocTouch.Designer.cs">
+      <DependentUpon>frmGesDocTouch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesForDivulgazioni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesForDivulgazioni.Designer.cs">
+      <DependentUpon>frmGesForDivulgazioni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesImpTerm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesImpTerm.Designer.cs">
+      <DependentUpon>frmGesImpTerm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesInventario.Designer.cs">
+      <DependentUpon>frmGesInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesOfferta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesOfferta.Designer.cs">
+      <DependentUpon>frmGesOfferta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesOffTransazione.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesOffTransazione.Designer.cs">
+      <DependentUpon>frmGesOffTransazione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesOrdFornitori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesOrdFornitori.Designer.cs">
+      <DependentUpon>frmGesOrdFornitori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesPrn1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesPrn1.Designer.cs">
+      <DependentUpon>frmGesPrn1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesStat.Designer.cs">
+      <DependentUpon>frmGesStat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesVariazioni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesVariazioni.Designer.cs">
+      <DependentUpon>frmGesVariazioni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesVarPos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesVarPos.Designer.cs">
+      <DependentUpon>frmGesVarPos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesVarPosImpianto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesVarPosImpianto.Designer.cs">
+      <DependentUpon>frmGesVarPosImpianto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesVarStorico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesVarStorico.Designer.cs">
+      <DependentUpon>frmGesVarStorico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMnuStampe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMnuStampe.Designer.cs">
+      <DependentUpon>frmMnuStampe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMsg1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMsg1.Designer.cs">
+      <DependentUpon>frmMsg1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMsg2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMsg2.Designer.cs">
+      <DependentUpon>frmMsg2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrnPlu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrnPlu.Designer.cs">
+      <DependentUpon>frmPrnPlu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProva.Designer.cs">
+      <DependentUpon>frmProva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeekDocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeekDocs.Designer.cs">
+      <DependentUpon>frmSeekDocs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeekEcrArt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeekEcrArt.Designer.cs">
+      <DependentUpon>frmSeekEcrArt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesTabelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyEtiFormati.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyEtiFormati.Designer.cs">
+      <DependentUpon>frmUtyEtiFormati.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSceltaFormato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesTabelle.Designer.cs">
+      <DependentUpon>frmGesTabelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMnuUtilita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMnuUtilita.Designer.cs">
+      <DependentUpon>frmMnuUtilita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeekArt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeekArt.Designer.cs">
+      <DependentUpon>frmSeekArt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeekCli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeekCli.Designer.cs">
+      <DependentUpon>frmSeekCli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeekInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeekInventario.Designer.cs">
+      <DependentUpon>frmSeekInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeekOrdFor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeekOrdFor.Designer.cs">
+      <DependentUpon>frmSeekOrdFor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeekTessere2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeekTessere2.Designer.cs">
+      <DependentUpon>frmSeekTessere2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeekFor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeekFor.Designer.cs">
+      <DependentUpon>frmSeekFor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeekOff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeekOff.Designer.cs">
+      <DependentUpon>frmSeekOff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyConfig.Designer.cs">
+      <DependentUpon>frmUtyConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyCtrlArtPos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyCtrlArtPos.Designer.cs">
+      <DependentUpon>frmUtyCtrlArtPos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyArtEstrazioni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyArtEstrazioni.Designer.cs">
+      <DependentUpon>frmUtyArtEstrazioni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyDataBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyDataBase.Designer.cs">
+      <DependentUpon>frmUtyDataBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyGraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyGraph.Designer.cs">
+      <DependentUpon>frmUtyGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyImpEcr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyImpEcr.Designer.cs">
+      <DependentUpon>frmUtyImpEcr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyImpianto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyImpianto.Designer.cs">
+      <DependentUpon>frmUtyImpianto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyMsg1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyMsg1.Designer.cs">
+      <DependentUpon>frmUtyMsg1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyPeriodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyPeriodo.Designer.cs">
+      <DependentUpon>frmUtyPeriodo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyPluEanAttivazione.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyPluEanAttivazione.Designer.cs">
+      <DependentUpon>frmUtyPluEanAttivazione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyPrnGiacenza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyPrnGiacenza.Designer.cs">
+      <DependentUpon>frmUtyPrnGiacenza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyPrzNegozio1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyPrzNegozio1.Designer.cs">
+      <DependentUpon>frmUtyPrzNegozio1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyStaStoCalendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyStaStoCalendario.Designer.cs">
+      <DependentUpon>frmUtyStaStoCalendario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyTab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyTab.Designer.cs">
+      <DependentUpon>frmUtyTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyTastiera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyTastiera.designer.cs">
+      <DependentUpon>frmUtyTastiera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyTessere.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyTessere.Designer.cs">
+      <DependentUpon>frmUtyTessere.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyTessRettifiche.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyTessRettifiche.Designer.cs">
+      <DependentUpon>frmUtyTessRettifiche.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyTessSostituzione.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyTessSostituzione.Designer.cs">
+      <DependentUpon>frmUtyTessSostituzione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyVarie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyVarie.Designer.cs">
+      <DependentUpon>frmUtyVarie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtyAlignApShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtyAlignApShop.Designer.cs">
+      <DependentUpon>frmUtyAlignApShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesVarTerm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesVarTerm.Designer.cs">
+      <DependentUpon>frmGesVarTerm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGesStatVenDettaglio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGesStatVenDettaglio.Designer.cs">
+      <DependentUpon>frmGesStatVenDettaglio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAMain.resx">
+      <DependentUpon>frmAMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaArtLegami.resx">
+      <DependentUpon>frmAnaArtLegami.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaArtEquivalenze.resx">
+      <DependentUpon>frmAnaArtEquivalenze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaArticolo.resx">
+      <DependentUpon>frmAnaArticolo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaArtNuovo.resx">
+      <DependentUpon>frmAnaArtNuovo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaCfoDocumenti.resx">
+      <DependentUpon>frmAnaCfoDocumenti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaDivFornitori.resx">
+      <DependentUpon>frmAnaDivFornitori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaDivForTest.resx">
+      <DependentUpon>frmAnaDivForTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaDivForTesta.resx">
+      <DependentUpon>frmAnaDivForTesta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesMovIngLabel01.resx">
+      <DependentUpon>frmGesMovIngLabel01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesMovIngLabel05.resx">
+      <DependentUpon>frmGesMovIngLabel05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesOrdForMisto.resx">
+      <DependentUpon>frmGesOrdForMisto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesStatMovLotto.resx">
+      <DependentUpon>frmGesStatMovLotto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesStatStoCancella.resx">
+      <DependentUpon>frmGesStatStoCancella.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesStatCeliachia.resx">
+      <DependentUpon>frmGesStatCeliachia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeekDivForTestate.resx">
+      <DependentUpon>frmSeekDivForTestate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaDivForTestaOLd.resx">
+      <DependentUpon>frmAnaDivForTestaOLd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaGestione.resx">
+      <DependentUpon>frmAnaGestione.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaTessera.resx">
+      <DependentUpon>frmAnaTessera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaDivFornitoriOld.resx">
+      <DependentUpon>frmAnaDivFornitoriOld.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesFattElettroniche.resx">
+      <DependentUpon>frmGesFattElettroniche.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesMovIngLabel04.resx">
+      <DependentUpon>frmGesMovIngLabel04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesStatArticoli.resx">
+      <DependentUpon>frmGesStatArticoli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesStatIVA.resx">
+      <DependentUpon>frmGesStatIVA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesStatMovCassa.resx">
+      <DependentUpon>frmGesStatMovCassa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesStatPunti.resx">
+      <DependentUpon>frmGesStatPunti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesStatReparto.resx">
+      <DependentUpon>frmGesStatReparto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesStatSettimanali.resx">
+      <DependentUpon>frmGesStatSettimanali.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesStatStorico.resx">
+      <DependentUpon>frmGesStatStorico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesTermImport.resx">
+      <DependentUpon>frmGesTermImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrnArtMerceologie.resx">
+      <DependentUpon>frmPrnArtMerceologie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeekDocLotti.resx">
+      <DependentUpon>frmSeekDocLotti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesDocLottiDettaglio.resx">
+      <DependentUpon>frmGesDocLottiDettaglio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesDocScoFatture.resx">
+      <DependentUpon>frmGesDocScoFatture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesMovIngLabel02.resx">
+      <DependentUpon>frmGesMovIngLabel02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesMovIngLabel03.resx">
+      <DependentUpon>frmGesMovIngLabel03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaArtIngredient2.resx">
+      <DependentUpon>frmAnaArtIngredient2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaArtIngredienti.resx">
+      <DependentUpon>frmAnaArtIngredienti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaArtMargini.resx">
+      <DependentUpon>frmAnaArtMargini.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaCliente.resx">
+      <DependentUpon>frmAnaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaFornitore.resx">
+      <DependentUpon>frmAnaFornitore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaTessera2.resx">
+      <DependentUpon>frmAnaTessera2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesDocumento.resx">
+      <DependentUpon>frmGesDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesInvSimula.resx">
+      <DependentUpon>frmGesInvSimula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesDocVenPesato.resx">
+      <DependentUpon>frmGesDocVenPesato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesStatMovArticoli.resx">
+      <DependentUpon>frmGesStatMovArticoli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesStatMovLegami.resx">
+      <DependentUpon>frmGesStatMovLegami.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesStatMovCassa2.resx">
+      <DependentUpon>frmGesStatMovCassa2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesStatRotazione.resx">
+      <DependentUpon>frmGesStatRotazione.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesTabEcr.resx">
+      <DependentUpon>frmGesTabEcr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesVarBilImpianto.resx">
+      <DependentUpon>frmGesVarBilImpianto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeekTessere.resx">
+      <DependentUpon>frmSeekTessere.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyAggArticoli.resx">
+      <DependentUpon>frmUtyAggArticoli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyArtFillMerceologie.resx">
+      <DependentUpon>frmUtyArtFillMerceologie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyConf.resx">
+      <DependentUpon>frmUtyConf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyConf1.resx">
+      <DependentUpon>frmUtyConf1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesChiusure.resx">
+      <DependentUpon>frmGesChiusure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesDivCtrlTab.resx">
+      <DependentUpon>frmGesDivCtrlTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesVarPromo.resx">
+      <DependentUpon>frmGesVarPromo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesDocStatArticoli.resx">
+      <DependentUpon>frmGesDocStatArticoli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesStatCtrlTotVen.resx">
+      <DependentUpon>frmGesStatCtrlTotVen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesStatCostiAggiorna.resx">
+      <DependentUpon>frmGesStatCostiAggiorna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesStatMerceologia.resx">
+      <DependentUpon>frmGesStatMerceologia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesStat2.resx">
+      <DependentUpon>frmGesStat2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesStatArt.resx">
+      <DependentUpon>frmGesStatArt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesStaTipoPagamenti.resx">
+      <DependentUpon>frmGesStaTipoPagamenti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesStatPremi.resx">
+      <DependentUpon>frmGesStatPremi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesStatScoDettaglio.resx">
+      <DependentUpon>frmGesStatScoDettaglio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyArtMerceologie.resx">
+      <DependentUpon>frmUtyArtMerceologie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrnArtScadenza.resx">
+      <DependentUpon>frmPrnArtScadenza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyAggPrzAnaArticoli.resx">
+      <DependentUpon>frmUtyAggPrzAnaArticoli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMnUtility.resx">
+      <DependentUpon>frmMnUtility.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesStatScontrini.resx">
+      <DependentUpon>frmGesStatScontrini.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrnForArticoli.resx">
+      <DependentUpon>frmPrnForArticoli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyCtrlArts.resx">
+      <DependentUpon>frmUtyCtrlArts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyCtrlJournal.resx">
+      <DependentUpon>frmUtyCtrlJournal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyCtrlLisFor.resx">
+      <DependentUpon>frmUtyCtrlLisFor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyDay.resx">
+      <DependentUpon>frmUtyDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyDivApPhone.resx">
+      <DependentUpon>frmUtyDivApPhone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyInput1.resx">
+      <DependentUpon>frmUtyInput1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyInvNegozio.resx">
+      <DependentUpon>frmUtyInvNegozio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyIva.resx">
+      <DependentUpon>frmUtyIva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyApShopAttArts.resx">
+      <DependentUpon>frmUtyApShopAttArts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyArfErrato.resx">
+      <DependentUpon>frmUtyArfErrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyArtScontoVenduto.resx">
+      <DependentUpon>frmUtyArtScontoVenduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyCtrlArtStat.resx">
+      <DependentUpon>frmUtyCtrlArtStat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyCtrlPrv.resx">
+      <DependentUpon>frmUtyCtrlPrv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyDivNegozi.resx">
+      <DependentUpon>frmUtyDivNegozi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyDivTerm.resx">
+      <DependentUpon>frmUtyDivTerm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyEstrazioni.resx">
+      <DependentUpon>frmUtyEstrazioni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesStatCtrlPagamenti.resx">
+      <DependentUpon>frmGesStatCtrlPagamenti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesStatCtrlTotali.resx">
+      <DependentUpon>frmGesStatCtrlTotali.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyDivPos.resx">
+      <DependentUpon>frmUtyDivPos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesDocPrint.resx">
+      <DependentUpon>frmGesDocPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesDocRaggruppa.resx">
+      <DependentUpon>frmGesDocRaggruppa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesDocScontrino.resx">
+      <DependentUpon>frmGesDocScontrino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesDocTouch.resx">
+      <DependentUpon>frmGesDocTouch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesForDivulgazioni.resx">
+      <DependentUpon>frmGesForDivulgazioni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesImpTerm.resx">
+      <DependentUpon>frmGesImpTerm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesInventario.resx">
+      <DependentUpon>frmGesInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesOfferta.resx">
+      <DependentUpon>frmGesOfferta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesOffTransazione.resx">
+      <DependentUpon>frmGesOffTransazione.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesOrdFornitori.resx">
+      <DependentUpon>frmGesOrdFornitori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesPrn1.resx">
+      <DependentUpon>frmGesPrn1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesStat.resx">
+      <DependentUpon>frmGesStat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesVariazioni.resx">
+      <DependentUpon>frmGesVariazioni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesVarPos.resx">
+      <DependentUpon>frmGesVarPos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesVarPosImpianto.resx">
+      <DependentUpon>frmGesVarPosImpianto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesVarStorico.resx">
+      <DependentUpon>frmGesVarStorico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMnuStampe.resx">
+      <DependentUpon>frmMnuStampe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMsg1.resx">
+      <DependentUpon>frmMsg1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMsg2.resx">
+      <DependentUpon>frmMsg2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrnPlu.resx">
+      <DependentUpon>frmPrnPlu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProva.resx">
+      <DependentUpon>frmProva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeekDocs.resx">
+      <DependentUpon>frmSeekDocs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeekEcrArt.resx">
+      <DependentUpon>frmSeekEcrArt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesTabelle.resx">
+      <DependentUpon>frmGesTabelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMnuUtilita.resx">
+      <DependentUpon>frmMnuUtilita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeekArt.resx">
+      <DependentUpon>frmSeekArt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeekCli.resx">
+      <DependentUpon>frmSeekCli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeekInventario.resx">
+      <DependentUpon>frmSeekInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeekOrdFor.resx">
+      <DependentUpon>frmSeekOrdFor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeekTessere2.resx">
+      <DependentUpon>frmSeekTessere2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeekFor.resx">
+      <DependentUpon>frmSeekFor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeekOff.resx">
+      <DependentUpon>frmSeekOff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyConfig.resx">
+      <DependentUpon>frmUtyConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyCtrlArtPos.resx">
+      <DependentUpon>frmUtyCtrlArtPos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyArtEstrazioni.resx">
+      <DependentUpon>frmUtyArtEstrazioni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyDataBase.resx">
+      <DependentUpon>frmUtyDataBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyGraph.resx">
+      <DependentUpon>frmUtyGraph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyImpEcr.resx">
+      <DependentUpon>frmUtyImpEcr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyImpianto.resx">
+      <DependentUpon>frmUtyImpianto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyMsg1.resx">
+      <DependentUpon>frmUtyMsg1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyPeriodo.resx">
+      <DependentUpon>frmUtyPeriodo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyPluEanAttivazione.resx">
+      <DependentUpon>frmUtyPluEanAttivazione.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyPrnGiacenza.resx">
+      <DependentUpon>frmUtyPrnGiacenza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyPrzNegozio1.resx">
+      <DependentUpon>frmUtyPrzNegozio1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyStaStoCalendario.resx">
+      <DependentUpon>frmUtyStaStoCalendario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyTab.resx">
+      <DependentUpon>frmUtyTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyTastiera.resx">
+      <DependentUpon>frmUtyTastiera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyTessere.resx">
+      <DependentUpon>frmUtyTessere.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyTessRettifiche.resx">
+      <DependentUpon>frmUtyTessRettifiche.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyTessSostituzione.resx">
+      <DependentUpon>frmUtyTessSostituzione.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtyVarie.resx">
+      <DependentUpon>frmUtyVarie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesVarTerm.resx">
+      <DependentUpon>frmGesVarTerm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGesStatVenDettaglio.resx">
+      <DependentUpon>frmGesStatVenDettaglio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AP.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
